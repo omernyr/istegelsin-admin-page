@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>istegelsin</title>
+  </head>
+  <body>
+    <!-- top navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="offcanvasExample">
+          <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
+        </button>
+        <a class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold" href="#">istegelsin</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavBar" aria-controls="topNavBar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="topNavBar">
+          <form class="d-flex ms-auto my-3 my-lg-0">
+            <div class="input-group">
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search"/>
+              <button class="btn btn-primary" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle ms-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-person-fill"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- top navigation bar -->
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-start sidebar-nav bg-dark" tabindex="-1" id="sidebar">
+      <div class="offcanvas-body p-2">
+        <nav class="navbar-dark">
+          <ul class="navbar-nav">
+            <li>
+              <a href="#" class="nav-link px-3 active">
+                <span class="me-2"><i class="bi bi-speedometer2"></i></span>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li class="my-4"><hr class="dropdown-divider bg-light"/></li>
+            <li>
+              <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
+                MENUS
+              </div>
+            </li>
+            <li>
+              <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#hamburgers">
+                <span class="me-2"><i class="bi bi-layout-split"></i></span>
+                <span>Hamburgers</span>
+                <span class="ms-auto">
+                  <span class="right-icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </span>
+              </a>
+              <div class="collapse" id="hamburgers">
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a href="#" class="nav-link px-3">
+                      <span class="me-2"
+                        ><i class="bi bi-speedometer2"></i
+                      ></span>
+                      <span>Whopper Menu</span>
+
+                      
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link px-3">
+                      <span class="me-2"
+                        ><i class="bi bi-speedometer2"></i
+                      ></span>
+                      <span>Chicken Menu</span>
+
+                      
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#vegetables">
+                <span class="me-2"><i class="bi bi-layout-split"></i></span>
+                <span>Vegetables</span>
+                <span class="ms-auto">
+                  <span class="right-icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </span>
+              </a>
+              <div class="collapse" id="vegetables">
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a href="#" class="nav-link px-3">
+                      <span class="me-2"><i class="bi bi-speedometer2"></i></span>
+                      <span>Kuru Fasulye</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link px-3">
+                      <span class="me-2"><i class="bi bi-speedometer2"></i></span>
+                      <span>Bakla Yemeği</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#juices">
+                <span class="me-2"><i class="bi bi-layout-split"></i></span>
+                <span>Juices</span>
+                <span class="ms-auto">
+                  <span class="right-icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </span>
+              </a>
+              <div class="collapse" id="juices">
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a href="#" class="nav-link px-3">
+                      <span class="me-2"><i class="bi bi-speedometer2"></i></span>
+                      <span>Kutu İçecekler</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link px-3">
+                      <span class="me-2"><i class="bi bi-speedometer2"></i></span>
+                      <span>Meyve Suyu</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#meats">
+                <span class="me-2"><i class="bi bi-layout-split"></i></span>
+                <span>Meats</span>
+                <span class="ms-auto">
+                  <span class="right-icon">
+                    <i class="bi bi-chevron-down"></i>
+                  </span>
+                </span>
+              </a>
+              <div class="collapse" id="meats">
+                <ul class="navbar-nav ps-3">
+                  <li>
+                    <a href="#" class="nav-link px-3">
+                      <span class="me-2"><i class="bi bi-speedometer2"></i></span>
+                      <span>Büryan</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="nav-link px-3">
+                      <span class="me-2"><i class="bi bi-speedometer2"></i></span>
+                      <span>Kuzu Tandır</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="my-4"><hr class="dropdown-divider bg-light"/></li>
+          </ul>
+        </nav>
+        <button type="button" class="btn btn-outline-light mx-3">
+          <i class="bi bi-plus"></i> Add Category
+        </button>
+      </div>
+    </div>
+    <!-- offcanvas -->
+    <main class="mt-5 pt-3">
+      
+      <div class="container-fluid">
+
+        <nav class="navbar">
+          <div class="container-fluid">
+            <div class="navbar-brand">
+              <h4 class="d-flex">Items</h4>
+            </div>
+            <div class="d-flex">
+              <button type="button" class="btn btn-outline-success"> <i class="bi bi-plus"></i> Add Items</button>
+            </div>
+          </div>
+        </nav>
+        <div class="row">
+          <div class="col-md-3 mb-3">
+
+            <div class="card " style="width: 18rem;">
+              <img src="https://images.deliveryhero.io/image/fd-tr/LH/jzs8-hero.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-danger">Chicken Menu</h5>
+                <p class="card-text" style="font-size:14px;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="d-flex hstack gap-3"> 
+                    <div class="d-block">
+                      <i class="bi bi-clock"></i><span class="text-danger fw-bold fs-5 px-1">20</span> <p class="fs-6 px-1">minutes</p>
+                    </div>
+                    <div class="d-block">
+                      <i class="bi bi-book"></i><span class="text-danger fw-bold fs-5 px-1">5</span> <p class="fs-6 px-1">minutes</p>
+                    </div>
+                    <div class="d-block">
+                      <i class="bi bi-people"></i><span class="text-danger fw-bold fs-5 px-1">4-5</span> <p class="fs-6 px-1">minutes</p>
+                    </div>
+                  </div>
+              
+                <a href="#" class="btn btn-outline-warning "> <i class="bi bi-pencil"></i> Edit</a>
+                <a href="#" class="btn btn-outline-danger "> <i class="bi bi-trash"></i> Delete</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-3 mb-3">
+
+            <div class="card" style="width: 18rem;">
+              <img src="https://images.deliveryhero.io/image/fd-tr/LH/jzs8-hero.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-danger">Chicken Menu</h5>
+                <p class="card-text" style="font-size:14px;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="d-flex hstack gap-3"> 
+                    <div class="d-block">
+                      <i class="bi bi-clock"></i><span class="text-danger fw-bold fs-5 px-1">20</span> <p class="fs-6 px-1">minutes</p>
+                    </div>
+                    <div class="d-block">
+                      <i class="bi bi-book"></i><span class="text-danger fw-bold fs-5 px-1">5</span> <p class="fs-6 px-1">minutes</p>
+                    </div>
+                    <div class="d-block">
+                      <i class="bi bi-people"></i><span class="text-danger fw-bold fs-5 px-1">4-5</span> <p class="fs-6 px-1">minutes</p>
+                    </div>
+                  </div>
+              
+                <a href="#" class="btn btn-outline-warning"> <i class="bi bi-pencil"></i> Edit</a>
+                <a href="#" class="btn btn-outline-danger "> <i class="bi bi-trash"></i> Delete</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-3 mb-3">
+
+            <div class="card" style="width: 18rem;">
+              <img src="https://images.deliveryhero.io/image/fd-tr/LH/jzs8-hero.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-danger">Chicken Menu</h5>
+                <p class="card-text" style="font-size:14px;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="d-flex hstack gap-3"> 
+                    <div class="d-block">
+                      <i class="bi bi-clock"></i><span class="text-danger fw-bold fs-5 px-1">20</span> <p class="fs-6 px-1">minutes</p>
+                    </div>
+                    <div class="d-block">
+                      <i class="bi bi-book"></i><span class="text-danger fw-bold fs-5 px-1">5</span> <p class="fs-6 px-1">minutes</p>
+                    </div>
+                    <div class="d-block">
+                      <i class="bi bi-people"></i><span class="text-danger fw-bold fs-5 px-1">4-5</span> <p class="fs-6 px-1">minutes</p>
+                    </div>
+                  </div>
+              
+                <a href="#" class="btn btn-outline-warning "> <i class="bi bi-pencil"></i> Edit</a>
+                <a href="#" class="btn btn-outline-danger "> <i class="bi bi-trash"></i> Delete</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-3 mb-3">
+
+            <div class="card" style="width: 18rem;">
+              <img src="https://images.deliveryhero.io/image/fd-tr/LH/jzs8-hero.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-danger">Chicken Menu</h5>
+                <p class="card-text" style="font-size:14px;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="d-flex hstack gap-3"> 
+                    <div class="d-block">
+                      <i class="bi bi-clock"></i><span class="text-danger fw-bold fs-5 px-1">20</span> <p class="fs-6 px-1">minutes</p>
+                    </div>
+                    <div class="d-block">
+                      <i class="bi bi-book"></i><span class="text-danger fw-bold fs-5 px-1">5</span> <p class="fs-6 px-1">minutes</p>
+                    </div>
+                    <div class="d-block">
+                      <i class="bi bi-people"></i><span class="text-danger fw-bold fs-5 px-1">4-5</span> <p class="fs-6 px-1">minutes</p>
+                    </div>
+                  </div>
+              
+                <a href="#" class="btn btn-outline-warning "> <i class="bi bi-pencil"></i> Edit</a>
+                <a href="#" class="btn btn-outline-danger "> <i class="bi bi-trash"></i> Delete</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-3 mb-3">
+
+            <div class="card" style="width: 18rem;">
+              <img src="https://images.deliveryhero.io/image/fd-tr/LH/jzs8-hero.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-danger">Chicken Menu</h5>
+                <p class="card-text" style="font-size:14px;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="d-flex hstack gap-3"> 
+                    <div class="d-block">
+                      <i class="bi bi-clock"></i><span class="text-danger fw-bold fs-5 px-1">20</span> <p class="fs-6 px-1">minutes</p>
+                    </div>
+                    <div class="d-block">
+                      <i class="bi bi-book"></i><span class="text-danger fw-bold fs-5 px-1">5</span> <p class="fs-6 px-1">minutes</p>
+                    </div>
+                    <div class="d-block">
+                      <i class="bi bi-people"></i><span class="text-danger fw-bold fs-5 px-1">4-5</span> <p class="fs-6 px-1">minutes</p>
+                    </div>
+                  </div>
+              
+                <a href="#" class="btn btn-outline-warning "> <i class="bi bi-pencil"></i> Edit</a>
+                <a href="#" class="btn btn-outline-danger "> <i class="bi bi-trash"></i> Delete</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-3 mb-3">
+
+            <div class="card" style="width: 18rem;">
+              <img src="https://images.deliveryhero.io/image/fd-tr/LH/jzs8-hero.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-danger">Chicken Menu</h5>
+                <p class="card-text" style="font-size:14px;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="d-flex hstack gap-3"> 
+                    <div class="d-block">
+                      <i class="bi bi-clock"></i><span class="text-danger fw-bold fs-5 px-1">20</span> <p class="fs-6 px-1">minutes</p>
+                    </div>
+                    <div class="d-block">
+                      <i class="bi bi-book"></i><span class="text-danger fw-bold fs-5 px-1">5</span> <p class="fs-6 px-1">minutes</p>
+                    </div>
+                    <div class="d-block">
+                      <i class="bi bi-people"></i><span class="text-danger fw-bold fs-5 px-1">4-5</span> <p class="fs-6 px-1">minutes</p>
+                    </div>
+                  </div>
+              
+                <a href="#" class="btn btn-outline-warning "> <i class="bi bi-pencil"></i> Edit</a>
+                <a href="#" class="btn btn-outline-danger "> <i class="bi bi-trash"></i> Delete</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-3 mb-3">
+
+            <div class="card" style="width: 18rem;">
+              <img src="https://images.deliveryhero.io/image/fd-tr/LH/jzs8-hero.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-danger">Chicken Menu</h5>
+                <p class="card-text" style="font-size:14px;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="d-flex hstack gap-3"> 
+                    <div class="d-block">
+                      <i class="bi bi-clock"></i><span class="text-danger fw-bold fs-5 px-1">20</span> <p class="fs-6 px-1">minutes</p>
+                    </div>
+                    <div class="d-block">
+                      <i class="bi bi-book"></i><span class="text-danger fw-bold fs-5 px-1">5</span> <p class="fs-6 px-1">minutes</p>
+                    </div>
+                    <div class="d-block">
+                      <i class="bi bi-people"></i><span class="text-danger fw-bold fs-5 px-1">4-5</span> <p class="fs-6 px-1">minutes</p>
+                    </div>
+                  </div>
+              
+                <a href="#" class="btn btn-outline-warning "> <i class="bi bi-pencil"></i> Edit</a>
+                <a href="#" class="btn btn-outline-danger "> <i class="bi bi-trash"></i> Delete</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-3 mb-3">
+
+            <div class="card" style="width: 18rem;">
+              <img src="https://images.deliveryhero.io/image/fd-tr/LH/jzs8-hero.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-danger">Chicken Menu</h5>
+                <p class="card-text" style="font-size:14px;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="d-flex hstack gap-3"> 
+                    <div class="d-block">
+                      <i class="bi bi-clock"></i><span class="text-danger fw-bold fs-5 px-1">20</span> <p class="fs-6 px-1">minutes</p>
+                    </div>
+                    <div class="d-block">
+                      <i class="bi bi-book"></i><span class="text-danger fw-bold fs-5 px-1">5</span> <p class="fs-6 px-1">minutes</p>
+                    </div>
+                    <div class="d-block">
+                      <i class="bi bi-people"></i><span class="text-danger fw-bold fs-5 px-1">4-5</span> <p class="fs-6 px-1">minutes</p>
+                    </div>
+                  </div>
+              
+                <a href="#" class="btn btn-outline-warning "> <i class="bi bi-pencil"></i> Edit</a>
+                <a href="#" class="btn btn-outline-danger "> <i class="bi bi-trash"></i> Delete</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        
+      </div>
+    </main>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/jquery.dataTables.min.js"></script>
+    <script src="./js/dataTables.bootstrap5.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
